@@ -1,15 +1,17 @@
-*{
-    margin: 5;
+* {
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI, Tahoma, Geneva, Verdana, sans-serif';
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-body{
+ 
+body {
     display: flex;
     background-color: #f4f6f9;
-    color: #333;   
+    color: #333;
 }
-.sidebar{
+ 
+.sidebar {
     width: 240px;
     height: 100vh;
     background-color: #0f172a;
@@ -17,26 +19,110 @@ body{
     padding: 25px;
     position: fixed;
 }
-.sidebar h2{
+ 
+.sidebar h2 {
     text-align: center;
     margin-bottom: 30px;
     font-size: 22px;
 }
+ 
 .sidebar a {
     display: block;
     color: white;
     text-decoration: none;
     padding: 12px;
     margin: 8px 0;
-    border-radius:8px;
+    border-radius: 8px;
     transition: 0.3s;
     font-size: 16px;
 }
-.sidebar a:hover{
-    background: black;
+ 
+.sidebar a:hover {
+    background: #1e293b;
 }
-.content{
+ 
+.content {
     margin-left: 260px;
     padding: 40px;
     width: 100%;
+}
+ 
+.card {
+    background-color: rgb(250 249, 249);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px rgb(0, 0, 0, 0.08);
+    margin-bottom: 30px;
+}
+ 
+.card h1,
+.card h2 {
+ 
+    margin-bottom: 15px;
+}
+ 
+.card p {
+    line-height: 1.6;
+    font-size: 16px;
+}
+ 
+.btn {
+    display: inline-block;
+    margin-top: 10px;
+    background-color: #2563eb;
+    color: white;
+    padding: 10px 14px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+ 
+}
+.btn:hover{
+    background: #1d4ed8;
+ 
+}
+.card form{
+    max-width: 600px;
+}
+label{
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 10px;
+    display: block;
+}
+ 
+input, select{
+    width: 100%;
+    padding: 14px;
+    margin: 10px 0;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+ 
+input[tipe="file"]{
+    padding: 12px;
+    font-size: 16px;
+    background: #f8fafc;
+ 
+}
+ 
+button{
+    cursor: pointer;
+    margin-top: 15px;
+    padding: 14px 20pc;
+    font-size: 18px;
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+ 
+button:hover{
+    background: #1d4ed8;
+}
+.card form {
+    max-width: 600px;
 }
