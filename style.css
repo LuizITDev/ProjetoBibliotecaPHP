@@ -1,128 +1,249 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+css /* RESET */
+ 
+/* Seleciona TODOS os elementos da página */
+*{
+margin:0; /* Remove margens padrão dos navegadores */
+padding:0; /* Remove espaçamentos internos padrão */
+box-sizing:border-box; /* Inclui padding e border dentro do tamanho total do elemento */
+font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Define a fonte padrão do site */
 }
  
-body {
-    display: flex;
-    background-color: #f4f6f9;
-    color: #333;
+/* BODY */
+ 
+body{
+display:flex; /* Ativa o layout flexível */
+background:#f4f6f9; /* Cor de fundo da página */
+color:#333; /* Cor padrão do texto */
 }
  
-.sidebar {
-    width: 240px;
-    height: 100vh;
-    background-color: #0f172a;
-    color: white;
-    padding: 25px;
-    position: fixed;
+/* MENU LATERAL */
+ 
+.sidebar{
+width:240px; /* Largura do menu lateral */
+height:100vh; /* Altura igual a 100% da altura da tela */
+background:#0f172a; /* Cor de fundo do menu */
+color:white; /* Cor do texto */
+padding:25px; /* Espaçamento interno */
+position:fixed; /* Menu fica fixo na tela */
 }
  
-.sidebar h2 {
-    text-align: center;
-    margin-bottom: 30px;
-    font-size: 22px;
+.sidebar h2{
+text-align:center; /* Centraliza o texto */
+margin-bottom:30px; /* Espaço abaixo do título */
+font-size:22px; /* Tamanho da fonte */
 }
  
-.sidebar a {
-    display: block;
-    color: white;
-    text-decoration: none;
-    padding: 12px;
-    margin: 8px 0;
-    border-radius: 8px;
-    transition: 0.3s;
-    font-size: 16px;
+.sidebar a{
+display:block; /* Faz o link ocupar toda a linha */
+color:white; /* Cor do texto */
+text-decoration:none; /* Remove sublinhado do link */
+padding:12px; /* Espaçamento interno */
+margin:8px 0; /* Espaçamento vertical entre links */
+border-radius:8px; /* Bordas arredondadas */
+transition:0.3s; /* Animação suave nas mudanças */
+font-size:16px; /* Tamanho da fonte */
 }
  
-.sidebar a:hover {
-    background: #1e293b;
+.sidebar a:hover{
+background:#1e293b; /* Cor ao passar o mouse */
 }
  
-.content {
-    margin-left: 260px;
-    padding: 40px;
-    width: 100%;
+/* ÁREA DE CONTEÚDO */
+ 
+.content{
+margin-left:260px; /* Espaço para não ficar atrás do menu lateral */
+padding:40px; /* Espaçamento interno */
+width:100%; /* Ocupa toda largura disponível */
 }
  
-.card {
-    background-color: rgb(250 249, 249);
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 5px rgb(0, 0, 0, 0.08);
-    margin-bottom: 30px;
+/* CARDS */
+ 
+.card{
+background:white; /* Fundo branco */
+padding:30px; /* Espaçamento interno */
+border-radius:12px; /* Cantos arredondados */
+box-shadow:0 5px 15px rgba(0,0,0,0.08); /* Sombra suave */
+margin-bottom:30px; /* Espaço entre cards */
 }
  
 .card h1,
-.card h2 {
- 
-    margin-bottom: 15px;
+.card h2{
+margin-bottom:15px; /* Espaço abaixo dos títulos */
 }
  
-.card p {
-    line-height: 1.6;
-    font-size: 16px;
+.card p{
+line-height:1.6; /* Altura da linha (melhora leitura) */
+font-size:16px; /* Tamanho da fonte */
 }
  
-.btn {
-    display: inline-block;
-    margin-top: 10px;
-    background-color: #2563eb;
-    color: white;
-    padding: 10px 14px;
-    border-radius: 6px;
-    text-decoration: none;
-    font-size: 14px;
-    transition: 0.3s;
+/* GRID DE LIVROS */
  
+.grid{
+display:grid; /* Usa layout grid */
+grid-template-columns:repeat(auto-fill,minmax(220px,1fr));
+/* Cria colunas automáticas com mínimo de 220px */
+gap:25px; /* Espaço entre os itens */
 }
+ 
+/* CARD DE LIVRO */
+ 
+.livro{
+background:white; /* Fundo branco */
+border-radius:12px; /* Bordas arredondadas */
+overflow:hidden; /* Esconde conteúdo que ultrapassa o limite */
+box-shadow:0 5px 15px rgba(0,0,0,0.1); /* Sombra */
+transition:0.3s; /* Animação suave */
+}
+ 
+.livro:hover{
+transform:translateY(-5px); /* Move o card levemente para cima */
+}
+ 
+.livro img{
+width:100%; /* Imagem ocupa toda largura */
+height:280px; /* Altura fixa */
+object-fit:contain; /* Mantém proporção da imagem */
+}
+ 
+/* INFORMAÇÕES DO LIVRO */
+ 
+.livro-info{
+padding:15px; /* Espaçamento interno */
+}
+ 
+.livro-info h3{
+font-size:18px; /* Tamanho do título */
+margin-bottom:5px; /* Espaço abaixo */
+}
+ 
+.livro-info p{
+font-size:14px; /* Tamanho do texto */
+margin-bottom:5px; /* Espaçamento inferior */
+}
+ 
+.livro-info small{
+color:#666; /* Cor cinza para texto secundário */
+}
+ 
+/* BOTÕES */
+ 
+.btn{
+display:inline-block; /* Permite padding e tamanho */
+margin-top:10px; /* Espaço acima */
+background:#2563eb; /* Cor do botão */
+color:white; /* Cor do texto */
+padding:10px 14px; /* Espaçamento interno */
+border-radius:6px; /* Bordas arredondadas */
+text-decoration:none; /* Remove sublinhado */
+font-size:14px; /* Tamanho da fonte */
+transition:0.3s; /* Animação suave */
+}
+ 
 .btn:hover{
-    background: #1d4ed8;
- 
+background:#1d4ed8; /* Cor ao passar o mouse */
 }
+ 
+/* FORMULÁRIOS */
+ 
 .card form{
-    max-width: 600px;
+max-width:600px; /* Limita largura do formulário */
 }
+ 
+/* LABEL */
+ 
 label{
-    font-size: 16px;
-    font-weight: 600;
-    margin-top: 10px;
-    display: block;
+font-size:16px; /* Tamanho do texto */
+font-weight:600; /* Texto em negrito */
+margin-top:10px; /* Espaço acima */
+display:block; /* Ocupa linha inteira */
 }
  
-input, select{
-    width: 100%;
-    padding: 14px;
-    margin: 10px 0;
-    font-size: 16px;
-    border-radius: 8px;
-    border: 1px solid #ccc;
+/* INPUT E SELECT */
+ 
+input,
+select{
+width:100%; /* Ocupa toda largura */
+padding:14px; /* Espaçamento interno */
+margin:10px 0; /* Espaçamento vertical */
+font-size:16px; /* Tamanho da fonte */
+border-radius:8px; /* Bordas arredondadas */
+border:1px solid #ccc; /* Borda cinza */
 }
  
-input[tipe="file"]{
-    padding: 12px;
-    font-size: 16px;
-    background: #f8fafc;
+/* CAMPO DE ARQUIVO */
  
+input[type="file"]{
+padding:12px; /* Espaçamento interno */
+font-size:16px; /* Tamanho da fonte */
+background:#f8fafc; /* Fundo levemente cinza */
 }
+ 
+/* BOTÃO DO FORMULÁRIO */
  
 button{
-    cursor: pointer;
-    margin-top: 15px;
-    padding: 14px 20pc;
-    font-size: 18px;
-    background: #2563eb;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    transition: 0.3s;
+margin-top:15px; /* Espaço acima */
+padding:14px 20px; /* Espaçamento interno */
+font-size:18px; /* Tamanho da fonte */
+background:#2563eb; /* Cor do botão */
+color:white; /* Cor do texto */
+border:none; /* Remove borda padrão */
+border-radius:8px; /* Bordas arredondadas */
+cursor:pointer; /* Mostra cursor de clique */
+transition:0.3s; /* Animação suave */
 }
  
 button:hover{
-    background: #1d4ed8;
+background:#1d4ed8; /* Cor ao passar mouse */
 }
-.card form {
-    max-width: 600px;
+ 
+/* IFRAME DE LEITURA */
+ 
+iframe{
+border:none; /* Remove borda */
+border-radius:10px; /* Bordas arredondadas */
+margin-top:15px; /* Espaço acima */
 }
+ 
+/* IMAGEM DE CAPA NA HOME */
+ 
+.banner{
+width:100%; /* Ocupa toda largura */
+border-radius:12px; /* Bordas arredondadas */
+margin-top:20px; /* Espaço acima */
+}
+ 
+/* RESPONSIVIDADE */
+ 
+/* Para telas menores que 900px */
+@media (max-width:900px){
+ 
+.sidebar{
+width:200px; /* Diminui largura do menu */
+}
+ 
+.content{
+margin-left:210px; /* Ajusta espaço do conteúdo */
+padding:25px; /* Reduz padding */
+}
+ 
+}
+ 
+/* Para telas menores que 700px */
+@media (max-width:700px){
+ 
+body{
+flex-direction:column; /* Layout vertical */
+}
+ 
+.sidebar{
+position:relative; /* Menu deixa de ser fixo */
+width:100%; /* Ocupa largura total */
+height:auto; /* Altura automática */
+}
+ 
+.content{
+margin-left:0; /* Remove margem lateral */
+}
+ 
+}
+ 

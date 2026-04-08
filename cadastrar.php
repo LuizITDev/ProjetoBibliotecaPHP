@@ -18,7 +18,7 @@
             <p>Adicione uma nova obra ao acervo digital da biblioteca. Preencha as informações abaixo e envie a capa e o
                 arquivo digital do livro em formato pdf.</p>
             <br>
-            <form action="salvar_livro.php" method="post">
+            <form action="salvar_livro.php" method="post" enctype="multipart/form-data">
                 <label> Título do livro</label>
                 <input type="text" name="titulo" required>
                 <label> Autor</label>
